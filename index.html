@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+        video {
+            width: 100%; 
+                height: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <video id="background-video" autoplay loop muted>
+        <source src="bgvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info-title"><span>Rules of this Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. You will have only <span>10 seconds</span> per each question.</div>
+            <div class="info">2. Once you select your answer, it can't be undone.</div>
+            <div class="info">3. You will get zero if you don't answer within the time limit.</div>
+        </div>
+        <div class="buttons">
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title"><b> Quiz Game </b> </div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">10</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Next</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Retake</button>
+            <button class="quit">Exit</button>
+        </div>
+    </div>
+   <!-- Credits Box -->
+
+  
+        <!-- Credits Box -->
+        <div class="credits-container">
+            <div class="credits-box">
+                <h2><b>MADE BY</b></h2>
+                <center>
+                <ul>
+                    <li>Rohan</li>
+                    <li>Lalit</li>  
+                    <li> Gautam</li>
+                    <li> Yuvraj</li>
+                    <li> Gopal</li>
+                    <li>Suraj</li>
+                    <!-- Add more friends here -->
+                </ul>
+            </center>
+            </div>
+        </div>
+
+
+
+    <!-- Include your friend's sound effects here -->
+    
+    <!-- Include this within your HTML -->
+<audio id="correctSound" preload="auto">
+    <source src="Correct.mp3" type="audio/mpeg">
+</audio>
+<audio id="incorrectSound" preload="auto">
+    <source src="Incorrect.mp3" type="audio/mpeg">
+</audio>
+<audio id="maxScoreSound" preload="auto">
+    <source src="Maxscoring.mp3" type="audio/mpeg">
+</audio>
+<audio id="zeroScoreSound" preload="auto">
+    <source src="zeroscore.mp3" type="audio/mpeg">
+</audio>
+
+
+
+
+
+    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+    <script src="questions.js"></script>
+
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <script src="script.js"></script>
+
+
+</body>
+</html>
+</html>
